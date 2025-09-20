@@ -1,4 +1,4 @@
-html_code = '''<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -234,48 +234,6 @@ html_code = '''<!DOCTYPE html>
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-            color: #2c3e50;
-        }
-        
-        .form-group input, .form-group select, .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #ecf0f1;
-            border-radius: 8px;
-            font-size: 1em;
-            transition: border-color 0.3s;
-        }
-        
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-            outline: none;
-            border-color: #3498db;
-        }
-        
-        .submit-btn {
-            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 8px;
-            font-size: 1.1em;
-            cursor: pointer;
-            transition: all 0.3s;
-            width: 100%;
-        }
-        
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(46,204,113,0.4);
-        }
-        
         /* 조황 갤러리 */
         .gallery {
             display: grid;
@@ -478,119 +436,117 @@ html_code = '''<!DOCTYPE html>
             </section>
             
             <!-- 예약 섹션 -->
-           <!-- 예약 섹션 -->
-<section id="reservation" class="section">
-    <div class="calendar-container">
-        <div class="calendar-header">
-            <button class="month-nav" onclick="changeMonth(-1)">‹</button>
-            <h2 id="currentMonth">2025년 9월</h2>
-            <button class="month-nav" onclick="changeMonth(1)">›</button>
-        </div>
-        
-        <div class="status-legend">
-            <div class="status-item">
-                <div class="status-color" style="background: #2ecc71;"></div>
-                <span>예약 가능</span>
-            </div>
-            <div class="status-item">
-                <div class="status-color" style="background: #95a5a6;"></div>
-                <span>예약 완료</span>
-            </div>
-            <div class="status-item">
-                <div class="status-color" style="background: #e74c3c;"></div>
-                <span>오늘</span>
-            </div>
-        </div>
-        
-        <div class="calendar" id="calendar">
-            <!-- 달력이 JavaScript로 생성됩니다 -->
-        </div>
-    </div>
-    
-    <div class="reservation-form" style="display: block;">
-        <h3>📝 예약 신청</h3>
-        <div style="text-align: center; padding: 30px; background: #f8f9fa; border-radius: 15px;">
-            <p style="margin-bottom: 20px; font-size: 1.1em; color: #2c3e50;">
-                아래 버튼을 클릭해서 예약을 신청해주세요
-            </p>
-            
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdl1-n4oDry7cV1d9DQMGqsTXtJ3I9q8XFO1fzx4lQkHAywMQ/viewform?usp=sharing&ouid=106944721453912240536" 
-               target="_blank" 
-               style="display: inline-block; 
-                      background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%); 
-                      color: white; 
-                      padding: 15px 30px; 
-                      text-decoration: none; 
-                      border-radius: 8px; 
-                      font-size: 1.1em; 
-                      margin: 20px 0;
-                      transition: transform 0.3s;">
-                📅 예약 신청하기
-            </a>
-            
-            <div style="margin-top: 20px; padding: 15px; background: white; border-radius: 8px; border: 1px solid #ddd;">
-                <p><strong>📞 예약 확인:</strong> 신청 후 선장님이 직접 연락드려 최종 확인합니다.</p>
-                <p><strong>💰 결제:</strong> 현장 결제 또는 계좌이체</p>
-                <p><strong>⏰ 취소:</strong> 출항 2일 전까지 무료 취소</p>
-            </div>
-        </div>
-    </div>
-</section>
+            <section id="reservation" class="section">
+                <div class="calendar-container">
+                    <div class="calendar-header">
+                        <button class="month-nav" onclick="changeMonth(-1)">‹</button>
+                        <h2 id="currentMonth">2025년 9월</h2>
+                        <button class="month-nav" onclick="changeMonth(1)">›</button>
+                    </div>
+                    
+                    <div class="status-legend">
+                        <div class="status-item">
+                            <div class="status-color" style="background: #2ecc71;"></div>
+                            <span>예약 가능</span>
+                        </div>
+                        <div class="status-item">
+                            <div class="status-color" style="background: #95a5a6;"></div>
+                            <span>예약 완료</span>
+                        </div>
+                        <div class="status-item">
+                            <div class="status-color" style="background: #e74c3c;"></div>
+                            <span>오늘</span>
+                        </div>
+                    </div>
+                    
+                    <div class="calendar" id="calendar">
+                        <!-- 달력이 JavaScript로 생성됩니다 -->
+                    </div>
+                </div>
+                
+                <div class="reservation-form" id="reservationForm" style="display: block;">
+                    <h3>📝 예약 신청</h3>
+                    <div style="text-align: center; padding: 30px; background: #f8f9fa; border-radius: 15px;">
+                        <p style="margin-bottom: 20px; font-size: 1.1em; color: #2c3e50;">
+                            아래 버튼을 클릭해서 예약을 신청해주세요
+                        </p>
+                        
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdl1-n4oDry7cV1d9DQMGqsTXtJ3I9q8XFO1fzx4lQkHAywMQ/viewform?usp=sharing&ouid=106944721453912240536" 
+                           target="_blank" 
+                           style="display: inline-block; 
+                                  background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%); 
+                                  color: white; 
+                                  padding: 15px 30px; 
+                                  text-decoration: none; 
+                                  border-radius: 8px; 
+                                  font-size: 1.1em; 
+                                  margin: 20px 0;
+                                  transition: transform 0.3s;">
+                            📅 예약 신청하기
+                        </a>
+                        
+                        <div style="margin-top: 20px; padding: 15px; background: white; border-radius: 8px; border: 1px solid #ddd;">
+                            <p><strong>📞 예약 확인:</strong> 신청 후 선장님이 직접 연락드려 최종 확인합니다.</p>
+                            <p><strong>💰 결제:</strong> 현장 결제 또는 계좌이체</p>
+                            <p><strong>⏰ 취소:</strong> 출항 2일 전까지 무료 취소</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-<!-- 조황 섹션 -->
-<section id="catch" class="section">
-    <h2>🐟 최근 조황 정보</h2>
-    <div class="gallery" id="catchGallery">
-        <div class="gallery-item">
-            <img src="https://via.placeholder.com/300x200/3498db/ffffff?text=감성돔+대박" alt="감성돔">
-            <div class="gallery-item-info">
-                <h3>📅 2025.09.18 조황</h3>
-                <p><strong>어종:</strong> 감성돔, 농어, 볼락</p>
-                <p><strong>날씨:</strong> 맑음, 파고 1m</p>
-                <p><strong>조과:</strong> 총 45마리 대박!</p>
-            </div>
-        </div>
-        
-        <div class="gallery-item">
-            <img src="https://via.placeholder.com/300x200/e74c3c/ffffff?text=방어+대형" alt="방어">
-            <div class="gallery-item-info">
-                <h3>📅 2025.09.15 조황</h3>
-                <p><strong>어종:</strong> 방어 (대형), 부시리</p>
-                <p><strong>날씨:</strong> 흐림, 파고 0.5m</p>
-                <p><strong>조과:</strong> 1인당 2~3마리 평균</p>
-            </div>
-        </div>
-        
-        <div class="gallery-item">
-            <img src="https://via.placeholder.com/300x200/2ecc71/ffffff?text=가족낚시+성공" alt="가족낚시">
-            <div class="gallery-item-info">
-                <h3>📅 2025.09.12 가족낚시</h3>
-                <p><strong>어종:</strong> 고등어, 전갱이, 볼락</p>
-                <p><strong>참가:</strong> 김○○님 가족 4명</p>
-                <p><strong>조과:</strong> 아이들도 대만족!</p>
-            </div>
-        </div>
-        
-        <div class="gallery-item">
-            <img src="https://via.placeholder.com/300x200/f39c12/ffffff?text=전문낚시" alt="전문낚시">
-            <div class="gallery-item-info">
-                <h3>📅 2025.09.10 전문낚시</h3>
-                <p><strong>기법:</strong> 흘림낚시, 에깅</p>
-                <p><strong>어종:</strong> 갈치, 오징어</p>
-                <p><strong>조과:</strong> 전문가들 만족!</p>
-            </div>
-        </div>
-    </div>
-    
-    <div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 15px;">
-        <h3>📸 조황 사진 및 동영상 업로드</h3>
-        <p>낚시 후 촬영하신 사진과 동영상을 공유해주세요!</p>
-        <p><strong>📧 이메일:</strong> songjeongho@fishing.com</p>
-        <p><strong>📱 카카오톡:</strong> 송정호</p>
-        <p><strong>🎁 특전:</strong> 채택된 사진에는 다음 출조 할인!</p>
-    </div>
-</section>
-
+            <!-- 조황 섹션 -->
+            <section id="catch" class="section">
+                <h2>🐟 최근 조황 정보</h2>
+                <div class="gallery" id="catchGallery">
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/300x200/3498db/ffffff?text=감성돔+대박" alt="감성돔">
+                        <div class="gallery-item-info">
+                            <h3>📅 2025.09.18 조황</h3>
+                            <p><strong>어종:</strong> 감성돔, 농어, 볼락</p>
+                            <p><strong>날씨:</strong> 맑음, 파고 1m</p>
+                            <p><strong>조과:</strong> 총 45마리 대박!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/300x200/e74c3c/ffffff?text=방어+대형" alt="방어">
+                        <div class="gallery-item-info">
+                            <h3>📅 2025.09.15 조황</h3>
+                            <p><strong>어종:</strong> 방어 (대형), 부시리</p>
+                            <p><strong>날씨:</strong> 흐림, 파고 0.5m</p>
+                            <p><strong>조과:</strong> 1인당 2~3마리 평균</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/300x200/2ecc71/ffffff?text=가족낚시+성공" alt="가족낚시">
+                        <div class="gallery-item-info">
+                            <h3>📅 2025.09.12 가족낚시</h3>
+                            <p><strong>어종:</strong> 고등어, 전갱이, 볼락</p>
+                            <p><strong>참가:</strong> 김○○님 가족 4명</p>
+                            <p><strong>조과:</strong> 아이들도 대만족!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/300x200/f39c12/ffffff?text=전문낚시" alt="전문낚시">
+                        <div class="gallery-item-info">
+                            <h3>📅 2025.09.10 전문낚시</h3>
+                            <p><strong>기법:</strong> 흘림낚시, 에깅</p>
+                            <p><strong>어종:</strong> 갈치, 오징어</p>
+                            <p><strong>조과:</strong> 전문가들 만족!</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 15px;">
+                    <h3>📸 조황 사진 및 동영상 업로드</h3>
+                    <p>낚시 후 촬영하신 사진과 동영상을 공유해주세요!</p>
+                    <p><strong>📧 이메일:</strong> songjeongho@fishing.com</p>
+                    <p><strong>📱 카카오톡:</strong> 송정호</p>
+                    <p><strong>🎁 특전:</strong> 채택된 사진에는 다음 출조 할인!</p>
+                </div>
+            </section>
             
             <!-- 공지사항 섹션 -->
             <section id="notice" class="section">
@@ -631,11 +587,10 @@ html_code = '''<!DOCTYPE html>
         
         <!-- 푸터 -->
         <footer class="footer">
-    <p>⚓ 송정호 낚시배 | 경남 남해군 미조면 송정리 1034-5</p>
-    <p>📞 010-5339-3313 | 📧 songjeongho@fishing.com</p>
-    <p style="margin-top: 10px; opacity: 0.8;">© 2025 송정호 낚시배. 안전하고 즐거운 바다낚시 여행을 제공합니다.</p>
-</footer>
-
+            <p>⚓ 송정호 낚시배 | 경남 남해군 미조면 송정리 1034-5</p>
+            <p>📞 010-5339-3313 | 📧 songjeongho@fishing.com</p>
+            <p style="margin-top: 10px; opacity: 0.8;">© 2025 송정호 낚시배. 안전하고 즐거운 바다낚시 여행을 제공합니다.</p>
+        </footer>
     </div>
 
     <script>
@@ -652,8 +607,12 @@ async function loadReservationsFromSheet() {
         const query = encodeURIComponent('SELECT A, B, C, D'); // A열=날짜, B열=이름, C열=인원, D열=상태
         const url = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?sheet=${sheetName}&tq=${query}`;
         
+        console.log('요청 URL:', url); // 디버깅용
+        
         const response = await fetch(url);
         const text = await response.text();
+        
+        console.log('응답 데이터:', text); // 디버깅용
         
         // Google Visualization API 응답 파싱
         const jsonString = text.substring(47).slice(0, -2);
@@ -661,30 +620,31 @@ async function loadReservationsFromSheet() {
         
         // 예약 데이터 처리
         reservations = {};
-        data.table.rows.forEach(row => {
-            if (row.c && row.c[0] && row.c[0].v) {
-                const dateValue = row.c[0].v;
-                const customerName = row.c[1] ? row.c[1].v : '';
-                const peopleCount = row.c[2] ? row.c[2].v : 0;
-                const status = row.c[3] ? row.c[3].v : 'available';
-                
-                // 날짜 형식 변환 (구글 폼 날짜 → YYYY-MM-DD)
-                let dateString;
-                if (typeof dateValue === 'string') {
-                    dateString = formatDateString(dateValue);
-                } else if (dateValue instanceof Date) {
-                    dateString = dateValue.toISOString().split('T')[0];
+        if (data.table && data.table.rows) {
+            data.table.rows.forEach(row => {
+                if (row.c && row.c[0] && row.c[0].v) {
+                    const dateValue = row.c[0].v;
+                    const customerName = row.c[1] ? row.c[1].v : '';
+                    const peopleCount = row.c[2] ? parseInt(row.c[2].v) || 0 : 0;
+                    
+                    // 날짜 형식 변환 (구글 폼 날짜 → YYYY-MM-DD)
+                    let dateString;
+                    if (typeof dateValue === 'string') {
+                        dateString = formatDateString(dateValue);
+                    } else if (dateValue instanceof Date) {
+                        dateString = dateValue.toISOString().split('T')[0];
+                    }
+                    
+                    if (dateString) {
+                        reservations[dateString] = {
+                            status: peopleCount >= 6 ? 'booked' : 'available',
+                            count: peopleCount,
+                            customerName: customerName
+                        };
+                    }
                 }
-                
-                if (dateString) {
-                    reservations[dateString] = {
-                        status: peopleCount >= 6 ? 'booked' : 'available',
-                        count: peopleCount,
-                        customerName: customerName
-                    };
-                }
-            }
-        });
+            });
+        }
         
         console.log('예약 데이터 로드 완료:', reservations);
         
@@ -813,7 +773,7 @@ async function generateCalendar() {
     }
 }
 
-// 날짜 선택 함수
+// 날짜 선택 함수 (수정된 안전한 버전)
 function selectDate(dateString, element) {
     if (element.classList.contains('booked')) return;
     
@@ -825,8 +785,14 @@ function selectDate(dateString, element) {
     element.classList.add('selected');
     selectedDate = dateString;
     
-    document.getElementById('reservationForm').style.display = 'block';
-    document.getElementById('reservationForm').scrollIntoView({ behavior: 'smooth' });
+    // 안전한 예약 폼 처리
+    const reservationForm = document.getElementById('reservationForm');
+    if (reservationForm) {
+        reservationForm.style.display = 'block';
+        reservationForm.scrollIntoView({ behavior: 'smooth' });
+    } else {
+        alert(`📅 ${dateString} 선택됨!\n\n예약 신청 버튼을 클릭해주세요! 🚀`);
+    }
 }
 
 // 월 변경 함수
@@ -847,15 +813,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 300000); // 5분 = 300,000ms
 });
 </script>
-
 </body>
-</html>'''
-
-
-print(html_code)
-
-
-
-
-
-
+</html>
